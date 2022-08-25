@@ -5,7 +5,7 @@ import Jss from 'jss';
 import DefaultUnits from 'jss-plugin-default-unit';
 
 import {App} from './app.jsx';
-import '../../moduleApp/build/module-app.css';
+import '../../moduleApp/build/main.css';
 
 Jss.use(DefaultUnits());
 

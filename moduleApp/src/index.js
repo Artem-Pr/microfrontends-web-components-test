@@ -32,7 +32,7 @@ class ModuleApp extends HTMLElement{
         this.applicationRoot = document.createElement('div');
         const link = document.createElement('link');
         link.rel = 'stylesheet';
-        link.href = 'module-app.css';
+        link.href = 'main.css';
         this.root.appendChild(this.applicationRoot);
         this.root.appendChild(link);
         

@@ -34,8 +34,6 @@ module.exports = merge(base, {
 			generateStatsFile: true,
 			statsOptions: {source: false}
 		}),
-		new MiniCssExtractPlugin({
-			filename: 'module-app.css'
-		})
+		new MiniCssExtractPlugin()
 	],
 });
