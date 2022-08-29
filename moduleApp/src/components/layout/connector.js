@@ -1,11 +1,7 @@
 export const connector = ({
     layout: {
-        loading,
-        open,
-        close
+        count
     }
 }) => ({
-    loading,
-    open,
-    close
+    count
 });

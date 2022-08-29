@@ -16,6 +16,7 @@ import '@epam/promo/styles.css';
 // import '../index.css';
 
 import {App} from './app.jsx';
+import {setCount} from './components/layout/actions/setters/setCount';
 
 // const template = document.createElement('template');
 // template.innerHTML = `
@@ -35,15 +36,12 @@ class ModuleApp extends HTMLElement{
         link.href = 'main.css';
         this.root.appendChild(this.applicationRoot);
         this.root.appendChild(link);
-        
-        // this.first = document.createElement('style');
-        // this.second = document.createElement('style');
-        // this.first.innerHTML = firstStyles;
-        // this.second.innerHTML = secondStyles;
-        // this.root.appendChild(this.first);
-        // this.root.appendChild(this.second);
-        
-        // this.root.appendChild(template.content.cloneNode(true));
+    
+        document.addEventListener('counterClick', event => {
+            console.log('moduleApp', event.detail);
+            const {layout: {count}} = this.store.getState();
+            this.store.dispatch(setCount(count + 1));
+        });
     }
 
     connectedCallback() {

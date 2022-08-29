@@ -7,6 +7,7 @@ const AppComponent = ({
 }) => () => {
     return (
         <div>
+            App 1
             <Layout />
         </div>
     );
